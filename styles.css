@@ -268,7 +268,7 @@ line-height: normal;
 border: none;
 
 }
-@media screen and (min-width: 421px) and (max-width: 1500px){
+@media screen and (min-width: 421px) and (max-width: 1800px){
 .hero-button{
   width: 100%;
   display: flex;
