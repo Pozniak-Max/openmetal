@@ -310,28 +310,28 @@ line-height: 22px;
 
 .green-button{
   display: flex;
-padding: 14px 34px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 10px;
-background: linear-gradient(113deg, #46C4A3 5.86%, #3CAC8F 100.1%);
-box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
-color: var(--White, #FFF);
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;  
-border: none;
-cursor: pointer;
-transition: background 0.2s, transform 0.2s;
+  padding: 15px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: linear-gradient(113deg, #46C4A3 5.86%, #3CAC8F 100.1%);
+  box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }
 .green-button:hover {
   background: linear-gradient(113deg, #51c5a6 5.86%, #5ecfb1 100.1%);
   box-shadow: 1px 2px 10px 0px rgba(14, 63, 98, 0.3); 
 }
-@media screen and (min-width: 421px) and (max-width: 5000px){
+@media screen and (min-width: 421px) and (max-width: 1919px){
 .hero-button{
   width: 100%;
   display: flex;
@@ -341,23 +341,23 @@ transition: background 0.2s, transform 0.2s;
 }
 .blue-button{
   display: inline-flex;
-padding: 10px 30px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 6px;
-background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
-box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
-color: var(--White, #FFF);
-font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-border: none;
-margin-inline-end: 20px;
-transition: background 0.2s, transform 0.2s;
-cursor: pointer;
+  padding: 15px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
+  box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  margin-inline-end: 20px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
 }
 .blue-button:hover {
   background: linear-gradient(113deg, #5190bd 5.86%, #5ca3d6 100.1%), #60a1cf;
@@ -875,6 +875,8 @@ line-height: 160%; /* 25.6px */
   background: #FFF;
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.04), 2px 8px 9px 0px rgba(0, 0, 0, 0.03), 5px 19px 12px 0px rgba(0, 0, 0, 0.02), 8px 34px 14px 0px rgba(0, 0, 0, 0.01), 13px 53px 15px 0px rgba(0, 0, 0, 0.00);
   padding: 15px;
+  width: 33%;
+  justify-content: space-between;
 }
 .testimonial-text p{
   font-size: 14px;
@@ -887,6 +889,8 @@ line-height: 160%; /* 25.6px */
 }
 .profile-photo img{
   margin-right: 10px;
+  width: 60px;
+    border-radius: 50%;
 }
 .name{
   color: var(--Black, #121E2A);
@@ -932,3 +936,448 @@ font-style: normal;
 font-weight: 400;
 line-height: 28px; /* 175% */
 }
+@media(min-width: 1920px){
+  .hero-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: flex-start;
+  }
+  .blue-button{
+    display: inline-flex;
+  padding: 15px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
+  box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  margin-inline-end: 20px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  }
+  .blue-button:hover {
+    background: linear-gradient(113deg, #5190bd 5.86%, #5ca3d6 100.1%), #60a1cf;
+    box-shadow: 1px 2px 10px 0px rgba(14, 63, 98, 0.3);
+  }
+  .here-hidden-image{
+    display: none;
+  }
+  .hero-usual-image{
+    display: block;
+  }
+  .header-link{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    background: var(--Gradient, linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%));
+    align-items: center;
+    justify-content: center;
+  }
+  .sign-button{
+    display: inline-flex;
+  padding: 15px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
+  box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+
+  .sign-button:hover {
+    background: linear-gradient(113deg, #16649A 5.86%, #267AB5 100.1%), #16649A;
+    /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+    box-shadow: 1px 2px 10px 0px rgba(14, 63, 98, 0.3); /* Add a subtle shadow on hover */
+  }
+  .green-button{
+    display: flex;
+    padding: 15px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: linear-gradient(113deg, #46C4A3 5.86%, #3CAC8F 100.1%);
+    box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .header-paragraph{
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 20px;
+  }
+  .header-link-a{
+    color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  }
+  .header-inner{
+    width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+  }
+  .title{
+    color: var(--Black, #121E2A);
+  font-family: Poppins;
+  font-size: 59px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  }
+  span{
+    background: var(--Gradient, linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 59px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  }
+  .hero{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .hero-container{
+    display: flex;
+    flex-direction:row;
+    width: 80%;
+  
+  }
+  .hero-paragraph{
+    align-self: stretch;
+    color: var(--Text-Black, #4D5660);
+  /* B */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%; /* 25.6px */
+    
+  }
+  .footer-paragraph{
+    margin-right: 30%;
+  }
+  .listing{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .list{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .list img{
+    width: 200px;
+  }
+  .roadmap-title{
+    width: 70%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 14px;
+  }
+  .roadmap-container{
+    display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      gap: 50px;
+  }
+  .roadmap-left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+  }
+  .roadmap-right-container{
+    width: 30%;
+  }
+  .roadmap-right-container img{
+    width: 120%;
+  }
+  .roadmap-container-sp{
+    display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      gap: 120px;
+  }
+  .roadmap-right-container .desized{
+    width: 110%;
+  }
+  .roadmap-right-container .resized{
+    width: 130%;
+  }
+  .roadmap-inner-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    padding-bottom: 120px;
+  }
+  .pricing-container{
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    width: 70%;
+  }
+  .testimonial-container{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    /* row-gap: 20px; */
+    gap: 20px;
+  }
+  .testimonial-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+  .pre-fotter-section {
+    width: 100%;
+    height: 55vh;
+    background: linear-gradient(275deg, #FFF 14.86%, rgba(255, 255, 255, 0.00) 33.6%), url(./img/businessman-pointing-at-his-presentation-on-the-futuristic-digital-screen\ 3.png), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 0%;
+    padding-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  .hero-right-conatainer img {
+    width: 110%;
+  }
+  .logo-header img{
+    width: 300px;
+  }
+  .roadmap-container-title h2{
+    font-size: 40px;
+  }
+  .roadmap-container-content p{
+    font-size: 18px;
+    margin-top: 20px
+  }
+  .absolute-num{
+    display: flex;
+    align-items: center;
+    padding-bottom: -55px;
+    /* bottom: 20px; */
+    margin-bottom: -30px
+  }
+  .number {
+    z-index: -1;
+    position: absolute;
+    width: 250px;
+}
+.pricing-title h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.pricing-title p{
+  font-size: 20px;
+}
+.testimonial .rating img{
+  width: 30px;
+}
+.testimonial-text p {
+  font-size: 16px;
+}
+.name {
+  color: var(--Black, #121E2A);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.name-description {
+  color: var(--Text-Black, #4D5660);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.profile-photo img {
+  margin-right: 10px;
+  width: 60px;
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.04), 2px 8px 9px 0px rgba(0, 0, 0, 0.03), 5px 19px 12px 0px rgba(0, 0, 0, 0.02), 8px 34px 14px 0px rgba(0, 0, 0, 0.01), 13px 53px 15px 0px rgba(0, 0, 0, 0.00);
+  padding: 20px;
+}
+.title-1{
+  font-size: 30px;
+}
+.under-text{
+  font-size: 18px;
+}
+.pricing-unit-body h3 {
+  background: var(--Gradient, linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.pricing-unit-body .timeframe {
+  color: var(--Black, #121E2A);
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}
+.extra {
+  color: #FF6262;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.36px;
+}
+.pricing-unit-header-transperent h4 {
+  background: var(--Gradient, linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+.pricing-unit-activated .title-1 {
+  background: white;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pricing-unit-activated .pricing-unit-header p {
+  color: var(--White, #FFF);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+}
+.hidden-p {
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  margin-bottom: 10px;
+}
+.social img {
+  width: 52px;
+  margin-right: 10px;
+}
+.logo img{
+  width: 400px;
+}
+footer p {
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+}
+/* Initially hide the tooltip */
+/* Initially hide the tooltip */
+.tooltiptext {
+  display: none;
+  width: 28%;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0; /* Start with opacity set to 0 */
+  transition: opacity 1s; /* Add a smooth transition for opacity */
+  margin-top: 20px;
+}
+
+/* Show the tooltip with a fade-in animation when hovering over the container */
+.roadmap-left-container:hover .tooltiptext {
+  display: block;
+  opacity: 1; /* Set opacity to 1 to make it visible */
+}
+a{
+  text-decoration: none;
+}
+
+
+
+
