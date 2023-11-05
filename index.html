@@ -157,6 +157,7 @@
       <button type="submit" class="button">Submit</button>
     </footer>
     </div>
+  </form>
   
 </div>
 
@@ -435,6 +436,132 @@
 </footer>
 <script src="./script.js"></script>
 <script>
+// document.querySelectorAll(".sign-button, .blue-button, .green-button, .blue-button-email,.header-link-a").forEach(function(button) {
+//   button.addEventListener("click", function() {
+//     const popupForm = document.getElementById("popupForm");
+//     const popupType = button.getAttribute("id"); // Use the button's ID as the popupType
+
+//     // Check if the button is for the contact form
+//     if (popupType === "showContactForm") {
+//       // Display the contact form HTML
+//       popupForm.innerHTML = `<form action="https://formsubmit.co/mobilochkaa870@gmail.com" method="post" class="sky-form">
+// 				<header>Contact Us</header>
+// 				<div class="fieldset-wrapper">
+// 				<fieldset>					
+// 					<section>
+						
+//             <label class="input">
+							
+// 							<input type="text" placeholder="Full Name" name="Full Name" required>
+// 							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+// 						</label>
+              
+//               </section>
+          
+// 					</section>
+					
+// 					<section>
+// 						<label class="input">
+							
+// 							<input type="text" placeholder="Email" name="Email" required>
+// 							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+// 						</label>
+// 					</section>
+					
+// 					<section>
+// 						<label class="input">
+							
+// 							<input type="text" placeholder="Business Name" name="Business Name" required>
+// 							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+// 						</label>
+// 					</section>
+					
+// 					<section>
+// 						<label class="input">
+						
+// 							<input type="text" placeholder="Company Website" name="Company Website" required>
+// 							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+// 						</label>
+
+// 					</section>
+//           <section>
+// 						<label class="input">
+						
+// 							<input type="tel" placeholder="Phone Number" name="Phone Number" required>
+// 							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+// 						</label>
+// 					</section>
+
+//           <section>
+// 						<label class="input">
+						
+// 							<input type="text" placeholder="Country" name="Country" required>
+// 							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+// 						</label>
+// 					</section>
+// 				</fieldset>
+					
+// 				<fieldset>
+// 					<section>
+// 						<label class="input">
+						
+// 							<input type="text" placeholder="Email Subject" name="email_subject" required>
+				
+// 						</label>
+// 					</section>
+//           <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+				
+				
+				
+					
+// 					<section>
+						
+// 					</section>
+// 				</fieldset>
+// 			</div>
+// 				<footer>
+// 					<div class="g-recaptcha"
+// 					data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+			
+// 				 <input type="hidden" name="_captcha" value="false">
+		 
+// 				 <button id="closePopup" class="button" type="button">Close</button>
+// 				 <button type="submit" class="button">Submit</button>
+// 				</footer>
+// 			</form>`;
+//     } else {
+//       // Set the header text based on the button's ID
+//       switch (popupType) {
+//         case "openSignUpForm":
+//           popupForm.querySelector("header").textContent = "Sign Up";
+//           break;
+//         case "openFormLearnMore":
+//           popupForm.querySelector("header").textContent = "Learn More";
+//           break;
+//         case "openFormFreeDemo":
+//           popupForm.querySelector("header").textContent = "Free Demo";
+//           break;
+//       }
+
+//       // Add a "closePopup" button to the other forms here
+//       // popupForm.innerHTML += `<button id="closePopup" class="button" type="button">Close</button>`;
+//     }
+
+ 
+//     popupForm.style.display = "block";
+//     document.querySelector(".overlay").style.display = "block";
+
+//     // Add the event listener for the "closePopup" button here
+//     document.getElementById("closePopup").addEventListener("click", function() {
+//       // Close the popup
+//       popupForm.style.display = "none";
+//       document.querySelector(".overlay").style.display = "none";
+//     });
+//   });
+// });
+
+
+
 document.querySelectorAll(".sign-button, .blue-button, .green-button, .blue-button-email,.header-link-a").forEach(function(button) {
   button.addEventListener("click", function() {
     const popupForm = document.getElementById("popupForm");
@@ -532,32 +659,253 @@ document.querySelectorAll(".sign-button, .blue-button, .green-button, .blue-butt
       // Set the header text based on the button's ID
       switch (popupType) {
         case "openSignUpForm":
-          popupForm.querySelector("header").textContent = "Sign Up";
+        popupForm.innerHTML = `<form action="https://formsubmit.co/mobilochkaa870@gmail.com" method="post" class="sky-form">
+    <header>Sign Up</header>
+    
+    <fieldset>					
+      <section>
+        
+        <label class="input">
+          
+          <input type="text" placeholder="Full Name" name="Full Name">
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+          
+          </section>
+      
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Email" name="Email" required>
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Business Name" name="Business Name" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Company Website" name="Company Website" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+
+      </section>
+      <section>
+        <label class="input">
+        
+          <input type="tel" placeholder="Phone Number" name="Phone Number" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Country" name="Country" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+    </fieldset>
+      
+    <fieldset>
+      
+      
+              </section>
+    </fieldset>
+    <div>
+      <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+     
+      <input type="hidden" name="_captcha" value="false">
+  
+      <button id="closePopup" class="button" type="button">Close</button>
+      <button type="submit" class="button">Submit</button>
+    </footer>
+    </div>
+  </form>`;
           break;
         case "openFormLearnMore":
-          popupForm.querySelector("header").textContent = "Learn More";
+        popupForm.innerHTML = `<form action="https://formsubmit.co/mobilochkaa870@gmail.com" method="post" class="sky-form">
+    <header>Learn More</header>
+    
+    <fieldset>					
+      <section>
+        
+        <label class="input">
+          
+          <input type="text" placeholder="Full Name" name="Full Name">
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+          
+          </section>
+      
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Email" name="Email" required>
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Business Name" name="Business Name" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Company Website" name="Company Website" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+
+      </section>
+      <section>
+        <label class="input">
+        
+          <input type="tel" placeholder="Phone Number" name="Phone Number" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Country" name="Country" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+    </fieldset>
+      
+    <fieldset>
+      
+      
+              </section>
+    </fieldset>
+    <div>
+      <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+      
+      <input type="hidden" name="_captcha" value="false">
+  
+      <button id="closePopup" class="button" type="button">Close</button>
+      <button type="submit" class="button">Submit</button>
+    </footer>
+    </div>
+  </form>`;
           break;
         case "openFormFreeDemo":
-          popupForm.querySelector("header").textContent = "Free Demo";
+        popupForm.innerHTML = `<form action="https://formsubmit.co/mobilochkaa870@gmail.com" method="post" class="sky-form">
+    <header>Free Demo</header>
+    
+    <fieldset>					
+      <section>
+        
+        <label class="input">
+          
+          <input type="text" placeholder="Full Name" name="Full Name">
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+          
+          </section>
+      
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Email" name="Email" required>
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Business Name" name="Business Name" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Company Website" name="Company Website" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+
+      </section>
+      <section>
+        <label class="input">
+        
+          <input type="tel" placeholder="Phone Number" name="Phone Number" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Country" name="Country" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+    </fieldset>
+      
+    <fieldset>
+      
+      
+              </section>
+    </fieldset>
+    <div>
+      <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+     
+      <input type="hidden" name="_captcha" value="false">
+  
+      <button id="closePopup" class="button" type="button">Close</button>
+      <button type="submit" class="button">Submit</button>
+    </footer>
+    </div>
+  </form>`;
           break;
       }
-
-      // Add a "closePopup" button to the other forms here
-      // popupForm.innerHTML += `<button id="closePopup" class="button" type="button">Close</button>`;
     }
 
- 
     popupForm.style.display = "block";
     document.querySelector(".overlay").style.display = "block";
 
-    // Add the event listener for the "closePopup" button here
+    // Add the event listener for the "closePopup" button outside the loop
     document.getElementById("closePopup").addEventListener("click", function() {
+      const popupForm = document.getElementById("popupForm");
+
       // Close the popup
       popupForm.style.display = "none";
       document.querySelector(".overlay").style.display = "none";
     });
+
+    // Handle the form submission when the "Submit" button is clicked
+    document.getElementById("submitContactForm").addEventListener("click", function() {
+      const contactForm = popupForm.querySelector("form");
+      contactForm.submit();
+    });
   });
 });
+
 
 
 
