@@ -13,7 +13,7 @@
 </head>
 <body>
   <style>
-    /* Styles for the popup */
+  
     .popup {
       display: none;
       position: fixed;
@@ -24,6 +24,12 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       z-index: 1000;
+      width: 90vw;
+    }
+    @media (min-width: 720px) {
+      .popup{
+        width: auto;
+      }
     }
 
     /* Styles for the overlay */
