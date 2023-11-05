@@ -83,6 +83,8 @@ body{
     flex-direction: column;
     width: 100%;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
   .logo-header img{
     width: 120px;
@@ -247,10 +249,10 @@ line-height: 22px;
   display: flex;
   flex-direction: column;
   /* row-gap: 20px; */
-  gap: 20px;
+  gap: 50px;
 }
 .testimonial-wrapper {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +261,7 @@ line-height: 22px;
 }
 .pre-fotter-section{
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 86.89%, #FFF 100%), url(./img/businessman-pointing-at-his-business-presentation-on-the-high-technology-digital-screen\ 1.png), lightgray 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-position: center;
@@ -278,9 +280,23 @@ line-height: 22px;
 }
 .footer-inner{
   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  /* padding: 20px 10px; */
+}
+.tooltiptext {
+  display: none;
+  width: 90%;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0; /* Start with opacity set to 0 */
+  transition: opacity 1s; /* Add a smooth transition for opacity */
+  margin-top: 20px;
 }
 }
 
@@ -414,12 +430,14 @@ transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 .header-link-a{
   color: var(--White, #FFF);
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-text-decoration-line: underline;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  background: transparent;
+  border: none;
 }
 .header-inner{
   width: 80%;
@@ -574,6 +592,17 @@ line-height: 130%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.04), 2px 8px 9px 0px rgba(0, 0, 0, 0.03), 5px 19px 12px 0px rgba(0, 0, 0, 0.02), 8px 34px 14px 0px rgba(0, 0, 0, 0.01), 13px 53px 15px 0px rgba(0, 0, 0, 0.00);
+  padding: 15px;
+width: 80%;
+margin-top: 20px;
+  justify-content: space-between;
 }
 }
 
@@ -868,16 +897,7 @@ line-height: 160%; /* 25.6px */
   ;
 }
 
-.testimonial{
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  background: #FFF;
-  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.04), 2px 8px 9px 0px rgba(0, 0, 0, 0.03), 5px 19px 12px 0px rgba(0, 0, 0, 0.02), 8px 34px 14px 0px rgba(0, 0, 0, 0.01), 13px 53px 15px 0px rgba(0, 0, 0, 0.00);
-  padding: 15px;
-  width: 33%;
-  justify-content: space-between;
-}
+
 .testimonial-text p{
   font-size: 14px;
 }
@@ -964,6 +984,28 @@ line-height: 28px; /* 175% */
   transition: background 0.2s, transform 0.2s;
   cursor: pointer;
   }
+  .hardware-blue-button,
+.blue-button-email{
+  display: inline-flex;
+  padding: 15px 45px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
+  box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  margin-inline-end: 20px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  margin-top: 10px;
+}
   .blue-button:hover {
     background: linear-gradient(113deg, #5190bd 5.86%, #5ca3d6 100.1%), #60a1cf;
     box-shadow: 1px 2px 10px 0px rgba(14, 63, 98, 0.3);
@@ -1002,6 +1044,7 @@ line-height: 28px; /* 175% */
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   }
+ 
 
   .sign-button:hover {
     background: linear-gradient(113deg, #16649A 5.86%, #267AB5 100.1%), #16649A;
@@ -1055,11 +1098,11 @@ line-height: 28px; /* 175% */
   }
   .title{
     color: var(--Black, #121E2A);
-  font-family: Poppins;
-  font-size: 59px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
   }
   span{
     background: var(--Gradient, linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%));
@@ -1351,9 +1394,48 @@ footer p {
   font-weight: 400;
   line-height: 28px;
 }
+.tooltiptext {
+  display: none;
+  width: 28%;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0; /* Start with opacity set to 0 */
+  transition: opacity 1s; /* Add a smooth transition for opacity */
+  margin-top: 20px;
+}
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.04), 2px 8px 9px 0px rgba(0, 0, 0, 0.03), 5px 19px 12px 0px rgba(0, 0, 0, 0.02), 8px 34px 14px 0px rgba(0, 0, 0, 0.01), 13px 53px 15px 0px rgba(0, 0, 0, 0.00);
+  padding: 15px;
+  width: 33%;
+  justify-content: space-between;
+}
+
 }
 /* Initially hide the tooltip */
-/* Initially hide the tooltip */
+.hardware {
+  background-color: #16649A;
+  margin-top: 10px;
+}
+
+/* Show the tooltip with a fade-in animation when hovering over the button */
+.hardware-blue-button:hover + .tooltiptext {
+  display: block;
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
 .tooltiptext {
   display: none;
   width: 28%;
@@ -1369,15 +1451,45 @@ footer p {
   margin-top: 20px;
 }
 
-/* Show the tooltip with a fade-in animation when hovering over the container */
-.roadmap-left-container:hover .tooltiptext {
-  display: block;
-  opacity: 1; /* Set opacity to 1 to make it visible */
+.hardware-blue-button{
+  display: inline-flex;
+    padding: 15px 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
+    box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    margin-inline-end: 20px;
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+    margin-top: 10px;
 }
-a{
-  text-decoration: none;
+.blue-button-email{
+  display: inline-flex;
+    padding: 15px 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: linear-gradient(113deg, #267AB5 5.86%, #16649A 100.1%), #267AB5;
+    box-shadow: 1px 2px 6px 0px rgba(14, 63, 98, 0.20);
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    margin-inline-end: 20px;
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
 }
-
-
-
 

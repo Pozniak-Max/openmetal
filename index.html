@@ -4,23 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./styles.css">
+
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="./sign-up-form-style.css">
+  <link rel="stylesheet" href="./contact-form.css">
+
   <title>openmetal</title>
 </head>
 <body>
+  <style>
+    /* Styles for the popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    /* Styles for the overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+     
+  </style>
   <div class="header-section">
     <div class="header-container">
     <div class="header-link">
       <p class="header-paragraph">Speak with a Cloud Expert for a free assessment and proof of concept cloud
       </p>
-      <a href="./learn_more.html" class="header-link-a">Learn More</a>
+      <button class="header-link-a" id="openFormLearnMore">Learn More</button>
     </div>
     <div class="header">
       <div class="header-inner">
       <div class="logo-header">
         <img src="./img/OpenMetal-Logo.svg" alt="">
       </div>
-      <a href="./sign_up.html"><button class="sign-button">Sign Up</button></a>
+    <button class="sign-button"  id="openSignUpForm">Sign Up</button>
     </div>
   </div>
 </div>
@@ -28,16 +60,17 @@
   <div class="hero-container">
     <div class="hero-left-container">
       <div class="hero-content">
-        <h1 class="title">Start Saving 50% with <span> OpenMetal's</span> License
+        <h1 class="title">Save 50% with <span> OpenMetal's</span> Hosted Private Cloud laaS
 
-          Free Hosted Private Cloud</h1>
+          </h1>
         <p class="hero-paragraph">OpenStack Hosted Private Cloud for everyday business! On-Demand Scalability, High Performance and dedicated hardware private cloud security with 99.99% SLAs
         </p>
       </div>
       <img src="./img/hero_img.png" alt="" class="here-hidden-image">
       <div class="hero-button">
-        <a href="./learn_more.html"><button class="blue-button">Learn More</button></a>
-        <a href="./free_demo.html"><button class="green-button">Free Demo</button></a>
+        <button class="blue-button"  id="openFormLearnMore">Learn More</button>
+        <!-- <a href="./free_demo.html"><button class="green-button"  id="openForm">Free Demo</button></a> -->
+        <button class="green-button"  id="openFormFreeDemo">Free Demo</button>
       </div>
     </div>
     <div class="hero-right-conatainer">
@@ -47,6 +80,94 @@
   </div>
 </div>
 
+
+
+
+<div class="popup" id="popupForm">
+		
+  <form action="https://formsubmit.co/mobilochkaa870@gmail.com" method="post" class="sky-form">
+    <header>Free Demo</header>
+    
+    <fieldset>					
+      <section>
+        
+        <label class="input">
+          
+          <input type="text" placeholder="Full Name" name="Full Name">
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+          
+          </section>
+      
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Email" name="Email" required>
+          <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+          
+          <input type="text" placeholder="Business Name" name="Business Name" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+      
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Company Website" name="Company Website" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+
+      </section>
+      <section>
+        <label class="input">
+        
+          <input type="tel" placeholder="Phone Number" name="Phone Number" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+
+      <section>
+        <label class="input">
+        
+          <input type="text" placeholder="Country" name="Country" required>
+          <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+        </label>
+      </section>
+    </fieldset>
+      
+    <fieldset>
+      
+      
+              </section>
+    </fieldset>
+    <div>
+      <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+      <!-- <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div> -->
+      <input type="hidden" name="_captcha" value="false">
+  
+      <button id="closePopup" class="button" type="button">Close</button>
+      <button type="submit" class="button">Submit</button>
+    </footer>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+
+<div class="overlay" id="overlay"></div>
 
 </div>
 <div class="section-span"></div>
@@ -80,11 +201,20 @@
         <h2>Choose Your OpenMetal Hardware Package
           </h2>
         </div>
-          <div class="roadmap-container-content">
-        <p>OpenMetal's Hosted Private Cloud starts with a cluster of 3 servers (also known as Private Cloud Core). Hardware Packages Include: Standard Cloud Core, Large Cloud Core, or XL Cloud Core for Intensive workloads. All clouds can add additional Nodes.</p>
-        <div class="tooltiptext"><strong>Standard Cloud Core:</strong> 33 CPU Cores (264 vCPUs) +339 GB RAM +3.2 TB NVMe Storage <br><strong>Large Cloud Core:</strong> 177 CPU Cores (1,516 vCPUs)+ 1.5 TB RAM + 12.8 TB NVMe Storage <br> <strong>XL Cloud Core:</strong> 369 CPU Cores (2,952 vCPUs)+ 3 TB RAM + 25.6 TB NVMe Storage All packages are scalable and additional server nodes can be added at anytime.</div>
+        <div class="roadmap-container-content">
+          <p>OpenMetal's Hosted Private Cloud starts with a cluster of 3 servers (also known as Private Cloud Core). Hardware Packages Include: Standard Cloud Core, Large Cloud Core, or XL Cloud Core for Intensive workloads. All clouds can add additional Nodes.</p>
+          <button class="hardware-blue-button">Hardware Packages</button>
+          <div class="tooltiptext">
+            <strong>Standard Cloud Core:</strong> 33 CPU Cores (264 vCPUs) + 339 GB RAM + 3.2 TB NVMe Storage <br>
+            <strong>Large Cloud Core:</strong> 177 CPU Cores (1,516 vCPUs) + 1.5 TB RAM + 12.8 TB NVMe Storage <br>
+            <strong>XL Cloud Core:</strong> 369 CPU Cores (2,952 vCPUs) + 3 TB RAM + 25.6 TB NVMe Storage
+            All packages are scalable, and additional server nodes can be added at any time.
+          </div>
+        </div>
+       
+       
       </div>
-      </div>
+        
       
      
       <div class="roadmap-right-container">
@@ -183,7 +313,7 @@
             </p>
             <p class="hidden-p">Egress Included
             </p>
-            <a href="./free_demo.html"><button class="green-button">Free Demo</button></a>
+            <button class="green-button" id="openFormFreeDemo">Free Demo</button>
         </div>
       
     </div>
@@ -288,8 +418,8 @@
     </p>
   </div>
   <div class="hero-button">
-    <a href="./contact_us.html"><button class="blue-button">Email</button></a>
-    <a href="https://calendly.com/openmetal-mor/30min"><button class="green-button">Schedule Call</button></a>
+    <button class="blue-button-email" id="showContactForm">Email</button>
+    <a href="https://calendly.com/openmetal-mor/30min" id="openFormScheduleCall"><button class="green-button">Schedule Call</button></a>
   </div>
 </div>
 </div>
@@ -304,5 +434,137 @@
   </div>
 </footer>
 <script src="./script.js"></script>
+<script>
+document.querySelectorAll(".sign-button, .blue-button, .green-button, .blue-button-email,.header-link-a").forEach(function(button) {
+  button.addEventListener("click", function() {
+    const popupForm = document.getElementById("popupForm");
+    const popupType = button.getAttribute("id"); // Use the button's ID as the popupType
+
+    // Check if the button is for the contact form
+    if (popupType === "showContactForm") {
+      // Display the contact form HTML
+      popupForm.innerHTML = `<form action="https://formsubmit.co/mobilochkaa870@gmail.com" method="post" class="sky-form">
+				<header>Contact Us</header>
+				<div class="fieldset-wrapper">
+				<fieldset>					
+					<section>
+						
+            <label class="input">
+							
+							<input type="text" placeholder="Full Name" name="Full Name" required>
+							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+						</label>
+              
+              </section>
+          
+					</section>
+					
+					<section>
+						<label class="input">
+							
+							<input type="text" placeholder="Email" name="Email" required>
+							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+						</label>
+					</section>
+					
+					<section>
+						<label class="input">
+							
+							<input type="text" placeholder="Business Name" name="Business Name" required>
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+					</section>
+					
+					<section>
+						<label class="input">
+						
+							<input type="text" placeholder="Company Website" name="Company Website" required>
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+
+					</section>
+          <section>
+						<label class="input">
+						
+							<input type="tel" placeholder="Phone Number" name="Phone Number" required>
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+					</section>
+
+          <section>
+						<label class="input">
+						
+							<input type="text" placeholder="Country" name="Country" required>
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+					</section>
+				</fieldset>
+					
+				<fieldset>
+					<section>
+						<label class="input">
+						
+							<input type="text" placeholder="Email Subject" name="email_subject" required>
+				
+						</label>
+					</section>
+          <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+				
+				
+				
+					
+					<section>
+						
+					</section>
+				</fieldset>
+			</div>
+				<footer>
+					<div class="g-recaptcha"
+					data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+			
+				 <input type="hidden" name="_captcha" value="false">
+		 
+				 <button id="closePopup" class="button" type="button">Close</button>
+				 <button type="submit" class="button">Submit</button>
+				</footer>
+			</form>`;
+    } else {
+      // Set the header text based on the button's ID
+      switch (popupType) {
+        case "openSignUpForm":
+          popupForm.querySelector("header").textContent = "Sign Up";
+          break;
+        case "openFormLearnMore":
+          popupForm.querySelector("header").textContent = "Learn More";
+          break;
+        case "openFormFreeDemo":
+          popupForm.querySelector("header").textContent = "Free Demo";
+          break;
+      }
+
+      // Add a "closePopup" button to the other forms here
+      // popupForm.innerHTML += `<button id="closePopup" class="button" type="button">Close</button>`;
+    }
+
+ 
+    popupForm.style.display = "block";
+    document.querySelector(".overlay").style.display = "block";
+
+    // Add the event listener for the "closePopup" button here
+    document.getElementById("closePopup").addEventListener("click", function() {
+      // Close the popup
+      popupForm.style.display = "none";
+      document.querySelector(".overlay").style.display = "none";
+    });
+  });
+});
+
+
+
+
+
+
+</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>
